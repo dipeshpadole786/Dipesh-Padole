@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { Send, MessageCircle } from "lucide-react";
 import { contactInfo, personal } from "@/lib/portfolio-data";
 import { Reveal } from "./Reveal";
 import { SectionTitle } from "./SectionTitle";
+import { DipeshBotChat } from "./DipeshBotChat";
 import { toast } from "sonner";
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sending, setSending] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -106,18 +108,31 @@ export function Contact() {
                   placeholder="Tell me about your project or opportunity…"
                 />
               </div>
-              <button
-                type="submit"
-                disabled={sending}
-                className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform disabled:opacity-60"
-              >
-                {sending ? "Sending…" : "Send Message"}
-                <Send className="h-4 w-4" />
-              </button>
+              <div className="flex flex-wrap gap-3">
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform disabled:opacity-60"
+                >
+                  {sending ? "Sending…" : "Send Message"}
+                  <Send className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setChatOpen(true)}
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-ink hover:border-ink/30 hover:scale-[1.03] transition"
+                >
+                  Chat with Dipesh
+                  <MessageCircle className="h-4 w-4" />
+                </button>
+              </div>
             </form>
           </Reveal>
         </div>
       </div>
+
+      {/* Dipesh Chat Modal */}
+      <DipeshBotChat isOpen={chatOpen} onClose={() => setChatOpen(false)} />
     </section>
   );
 }

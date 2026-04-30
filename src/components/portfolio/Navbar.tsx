@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { navItems } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/use-theme";
@@ -42,9 +43,7 @@ export function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled
-          ? "py-3 bg-background/80 backdrop-blur-xl border-b border-border"
-          : "py-5"
+        scrolled ? "py-3 bg-background/80 backdrop-blur-xl border-b border-border" : "py-5",
       )}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between gap-4">
@@ -68,9 +67,7 @@ export function Navbar() {
                 onClick={() => go(item.id)}
                 className={cn(
                   "relative px-4 py-2 text-sm font-medium rounded-full transition-colors",
-                  active === item.id
-                    ? "text-primary-foreground"
-                    : "text-ink-soft hover:text-ink"
+                  active === item.id ? "text-primary-foreground" : "text-ink-soft hover:text-ink",
                 )}
               >
                 {active === item.id && (
@@ -103,12 +100,13 @@ export function Navbar() {
               <span className="h-5 w-5" />
             )}
           </button>
-          <button
-            onClick={() => go("contact")}
+          <Link
+            to="/dipeshbot"
+            onClick={() => setOpen(false)}
             className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-2.5 text-sm font-semibold text-primary-foreground hover:scale-[1.03] transition-transform"
           >
             Let's Talk
-          </button>
+          </Link>
         </div>
 
         <button
@@ -134,9 +132,7 @@ export function Navbar() {
               aria-label="Toggle theme"
               className="mb-2 w-full flex items-center justify-between rounded-2xl border border-border bg-secondary/40 px-4 py-3 text-sm font-medium text-ink-soft hover:text-ink hover:border-ink/30 transition-colors"
             >
-              <span>
-                {mounted ? (theme === "dark" ? "Light mode" : "Dark mode") : "Theme"}
-              </span>
+              <span>{mounted ? (theme === "dark" ? "Light mode" : "Dark mode") : "Theme"}</span>
               {mounted ? (
                 theme === "dark" ? (
                   <Sun className="h-4.5 w-4.5" />
@@ -156,7 +152,7 @@ export function Navbar() {
                       "w-full text-left px-4 py-3 rounded-2xl text-sm font-medium transition-colors",
                       active === item.id
                         ? "bg-ink text-primary-foreground"
-                        : "text-ink-soft hover:bg-secondary"
+                        : "text-ink-soft hover:bg-secondary",
                     )}
                   >
                     {item.label}
@@ -164,12 +160,13 @@ export function Navbar() {
                 </li>
               ))}
               <li>
-                <button
-                  onClick={() => go("contact")}
-                  className="mt-2 w-full rounded-2xl bg-ink text-primary-foreground px-4 py-3 text-sm font-semibold"
+                <Link
+                  to="/dipeshbot"
+                  onClick={() => setOpen(false)}
+                  className="mt-2 block w-full rounded-2xl bg-ink text-primary-foreground px-4 py-3 text-sm font-semibold text-center"
                 >
                   Let's Talk
-                </button>
+                </Link>
               </li>
             </ul>
           </motion.div>

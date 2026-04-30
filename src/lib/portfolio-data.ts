@@ -146,6 +146,23 @@ export const projects = [
     github: "https://github.com/dipeshpadole786/MERN-E-commerce",
     demo: "#",
   },
+  {
+    title: "Universal Information Assistant (AI for Accessibility)",
+    description:
+      "AI-powered system built at TantraFiesta 2025 (IIIT Nagpur) to make digital content more accessible and understandable. Features a two-stage pipeline: an Audit Engine that detects readability issues, jargon, and structural gaps, and a Remediation Engine that reconstructs content with simplified language, summaries, and improved hierarchy. Developed during an 18-hour hackathon using Claude AI.",
+    tech: ["Claude AI API", "Prompt Engineering", "RAG (Lightweight)", "Node.js"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "AI Telemedicine Queue System (SDG 3 - HealthTech)",
+    description:
+      "Developed during Central India Hackathon, this AI-powered telemedicine system prioritizes patients based on medical need rather than first-come-first-serve. Designed for rural and understaffed clinics to improve healthcare accessibility and efficiency. Built under intense 24-hour hackathon conditions with focus on real-world impact.",
+    tech: ["AI/ML", "Healthcare Analytics", "Queue Optimization", "Web Development"],
+    github: "#",
+    demo: "#",
+  },
+
 ];
 
 export const education = {

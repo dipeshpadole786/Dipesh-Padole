@@ -1,0 +1,132 @@
+DIPESH PADOLE - PORTFOLIO & ABOUT ME
+====================================
+
+HEY, I'M DIPESH 👋
+AI & Data Science Student | MERN Developer | Full Stack Engineer
+
+Welcome to my portfolio! I'm Dipesh Padole, an AI & Data Science student at YCCE Nagpur, passionate about building AI-powered web applications, smart IoT solutions, and occasionally fighting bugs at 2 AM 😅
+
+ABOUT ME
+========
+I'm a Full Stack MERN developer and AI enthusiast with a focus on creating intelligent, scalable web applications and IoT systems. With a strong foundation in core web technologies and emerging AI/ML tools, I bridge the gap between innovative AI concepts and practical, user-centric solutions.
+
+CURRENT STATUS
+==============
+📚 Student: B.Tech in Artificial Intelligence & Data Science (YCCE Nagpur)
+🎓 CGPA: 9.62 (Till Sem 3)
+💼 Internship: Frontend Development Intern at CodeAlpha (June 2025)
+🏆 Rank: 43 at YCCE Nagpur
+
+MY PHILOSOPHY
+=============
+Understand the problem → Design clean architecture → Ship fast, iterate smarter
+
+WHAT I DO
+=========
+
+Full Stack Web Development
+End-to-end MERN applications with clean architecture, REST APIs, authentication, and production-ready deployment pipelines.
+
+Frontend Engineering
+Pixel-perfect, responsive interfaces using React.js, Tailwind CSS, and modern animation libraries. Expertise in component architecture and UX optimization.
+
+AI & Automation
+Building ML models, LLM agents, and automated workflows using n8n, Groq LLM, and modern AI tooling.
+
+IoT & Smart Systems
+Arduino + ESP8266 powered smart devices integrated with real-time dashboards and APIs for intelligent automation.
+
+TECH STACK
+==========
+
+Frontend Tech
+- React.js, HTML, CSS, Tailwind CSS, Bootstrap, EJS
+- Responsive Design, Component Architecture
+
+Backend & Databases
+- Node.js, Express.js, MongoDB, Mongoose
+- REST APIs, Authentication & Authorization
+
+AI & Automation
+- Machine Learning, n8n Workflows, Groq LLM
+- Arduino, ESP8266, IoT Integration
+
+Tools & DevOps
+- Git & GitHub, Docker
+- Deployment (Vercel, Netlify, AWS)
+
+FEATURED PROJECTS
+=================
+
+1. Smart Waste Management System 🌍
+AI + IoT based waste monitoring platform with intelligent waste bin tracking, municipal oversight, and citizen engagement.
+Tech: React, Node.js, MongoDB, Arduino, ESP8266
+Features: Citizen dashboard, complaint system, Leaflet maps, smart bin integration
+GitHub: https://github.com/dipeshpadole786/Waste-Management-System
+
+2. AI Travel Planner ✈️
+PNR-based smart travel planner for Nagpur recommending optimal departure timing, transportation modes, and live train tracking.
+Tech: React, APIs, Node.js, Maps
+Features: Route optimization, real-time tracking, multi-modal recommendations
+GitHub: https://github.com/dipeshpadole786/Project_Rail
+
+3. Jethalal AI Sales Assistant 🤖
+AI-powered electronics shop assistant with n8n workflows, Groq LLM, and Telegram bot integration for automated customer support and billing.
+Tech: n8n, AI Agents, JavaScript, Telegram API
+Features: Memory handling, automated billing, conversational AI
+Highlight: Integrated LLM agents with workflow automation
+
+4. MERN E-Commerce Platform 🛒
+Full-stack e-commerce application with complete authentication, shopping cart, admin dashboard, analytics, and order management.
+Tech: MongoDB, Express.js, React.js, Node.js
+Features: User auth, product catalog, payment integration, admin analytics
+GitHub: https://github.com/dipeshpadole786/MERN-E-commerce
+
+STATISTICS
+==========
+Projects Built: 15+
+Hackathon Participations: 5+
+DSA Problems Solved: 180+
+GitHub Followers: 1400+
+Current CGPA: 9.62
+
+EDUCATION
+=========
+B.Tech in Artificial Intelligence & Data Science
+YCCE Nagpur | 2024 – 2028
+
+Semester Progress:
+- Sem 1: 9.12 CGPA
+- Sem 2: 9.50 CGPA
+- Sem 3: 9.62 CGPA ⭐ (Latest)
+
+EXPERIENCE
+==========
+Frontend Development Intern
+CodeAlpha | June 2025
+
+ACHIEVEMENTS & RECOGNITION
+===========================
+🥇 IIT Bombay Zerve AI Datathon Finalist (2025)
+🥇 Central India Hackathon Participant (2025)
+🥇 TantraFiesta AI Accessibility Hackathon (2025)
+⚡ 180+ DSA Problems Solved (Ongoing)
+🏅 Rank 43 at YCCE Nagpur (2024)
+
+CONTACT INFORMATION
+===================
+📧 Email: dipesh.padole@example.com
+💼 LinkedIn: https://www.linkedin.com/in/dipesh-padole-358932339
+🐙 GitHub: https://github.com/dipeshpadole786
+💻 LeetCode: https://leetcode.com/u/dipeshpadole_0067/
+🎯 GeeksforGeeks: https://www.geeksforgeeks.org/profile/dipeshpadole0067
+Location: Nagpur, Maharashtra, India 📍
+
+FUN FACTS
+=========
+🐛 I debug code at 2 AM and find coffee in my veins
+🤖 Passionate about AI-powered solutions that solve real-world problems
+📚 Continuous learner exploring ML, LLMs, and IoT ecosystems
+🚀 Believer in shipping fast and iterating smarter
+
+Made with ❤️ by Dipesh Padole

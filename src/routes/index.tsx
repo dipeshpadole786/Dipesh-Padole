@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
@@ -15,8 +14,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Dipesh Padole — AI & Data Science Student · Full Stack Developer",
+        title: "Dipesh Padole — AI & Data Science Student · Full Stack Developer",
       },
       {
         name: "description",
@@ -34,8 +32,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:description",
-        content:
-          "Premium portfolio showcasing AI, MERN, and IoT projects by Dipesh Padole.",
+        content: "Premium portfolio showcasing AI, MERN, and IoT projects by Dipesh Padole.",
       },
       { property: "og:type", content: "website" },
       {
@@ -62,7 +59,6 @@ function Index() {
       </main>
       <Footer />
       <ScrollToTop />
-      <Toaster />
     </div>
   );
 }

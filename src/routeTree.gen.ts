@@ -9,8 +9,14 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as DipeshbotRouteImport } from './routes/dipeshbot'
 import { Route as IndexRouteImport } from './routes/index'
 
+const DipeshbotRoute = DipeshbotRouteImport.update({
+  id: '/dipeshbot',
+  path: '/dipeshbot',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +25,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/dipeshbot': typeof DipeshbotRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/dipeshbot': typeof DipeshbotRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/dipeshbot': typeof DipeshbotRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/dipeshbot'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/dipeshbot'
+  id: '__root__' | '/' | '/dipeshbot'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DipeshbotRoute: typeof DipeshbotRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/dipeshbot': {
+      id: '/dipeshbot'
+      path: '/dipeshbot'
+      fullPath: '/dipeshbot'
+      preLoaderRoute: typeof DipeshbotRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DipeshbotRoute: DipeshbotRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
