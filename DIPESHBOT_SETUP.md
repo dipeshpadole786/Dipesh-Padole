@@ -48,9 +48,13 @@ DipeshBot is an AI-powered chatbot that answers questions about Dipesh's portfol
    cp .env.example .env.local
    ```
 
-2. **Verify API URL (should be default):**
+2. **Verify API URL:**
    ```
    VITE_DIPESHBOT_API=http://localhost:8002
+   ```
+   For production, set it to your Render backend URL:
+   ```
+   VITE_DIPESHBOT_API=https://dipesh-padole.onrender.com
    ```
 
 3. **Run the frontend:**
@@ -125,8 +129,27 @@ curl -X POST http://localhost:8002/chat \
   ```
 - Update frontend `.env.local`:
   ```
-  VITE_DIPESHBOT_API=http://localhost:8003
-  ```
+   VITE_DIPESHBOT_API=http://localhost:8003
+   ```
+
+## Deploying on Render
+
+### Deploy DipeshBot (Backend)
+
+- Create a **Python Web Service**
+- Root directory: `DipeshBot`
+- Build: `pip install -r requirements.txt`
+- Start: `uvicorn api_server:app --host 0.0.0.0 --port $PORT`
+- Env vars: `GROQ_API_KEY`, `DIPESHBOT_CORS_ORIGINS`
+
+### Deploy Frontend
+
+This project uses TanStack Start, so deploy the frontend as a **Node Web Service** (not a Static Site).
+
+- Root directory: *(blank)*
+- Build: `npm install && npm run build`
+- Start: `npm run start` (runs `node .output/server/index.mjs`)
+- Env vars: `VITE_DIPESHBOT_API=https://dipesh-padole.onrender.com`
 
 ## Performance Notes
 

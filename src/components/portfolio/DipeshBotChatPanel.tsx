@@ -10,7 +10,7 @@ interface ChatMessage {
   timestamp: Date;
 }
 
-const API_BASE_URL = import.meta.env.VITE_DIPESHBOT_API || "http://localhost:8002";
+const API_BASE_URL = import.meta.env.VITE_DIPESHBOT_API || "https://dipesh-padole.onrender.com";
 
 interface DipeshBotChatPanelProps {
   className?: string;
