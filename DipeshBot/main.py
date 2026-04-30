@@ -40,6 +40,10 @@ except Exception:
 from pipeline import initialise_pipeline
 from rag_chain import query_rag
 
+# Re-export the FastAPI app so deployment platforms can use:
+#   uvicorn main:app --host 0.0.0.0 --port $PORT
+from api_server import app  # noqa: E402,F401
+
 BANNER = """
 ============================================================
         DIPESHBOT - Portfolio AI Assistant
