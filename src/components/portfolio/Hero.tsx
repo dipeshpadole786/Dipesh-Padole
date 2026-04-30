@@ -53,9 +53,9 @@ export function Hero() {
       className="relative pt-20 md:pt-24 pb-10 md:pb-14 overflow-hidden"
     >
       <div className="container mx-auto px-6 relative">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
           {/* Left */}
-          <div>
+          <div className="lg:ml-6 xl:ml-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-5 text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.95] text-ink"
+              className="mt-5 text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[0.95] text-ink"
             >
               Dipesh
               <br />

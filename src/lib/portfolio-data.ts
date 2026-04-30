@@ -31,6 +31,8 @@ export const personal = {
   email: "dipesh.padole@example.com",
   location: "Nagpur, Maharashtra, India",
   linkedin: "https://www.linkedin.com/in/dipesh-padole-358932339",
+  graphicLinkLabel: "View Dipesh Padole’s graphic",
+  graphicLink: "https://www.linkedin.com/in/dipesh-padole-358932339",
   github: "https://github.com/dipeshpadole786",
   leetcode: "https://leetcode.com/u/dipeshpadole_0067/",
   gfg: "https://www.geeksforgeeks.org/profile/dipeshpadole0067",
@@ -180,6 +182,7 @@ export const contactInfo = [
   { icon: Cpu, label: "GeeksforGeeks", href: personal.gfg },
   { icon: Github, label: "GitHub", href: personal.github },
   { icon: Linkedin, label: "LinkedIn", href: personal.linkedin },
+  { icon: Lightbulb, label: personal.graphicLinkLabel, href: personal.graphicLink },
 ];
 
 export const navItems = [
