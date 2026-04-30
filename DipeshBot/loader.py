@@ -17,11 +17,13 @@ from langchain_community.document_loaders import (
     CSVLoader,
 )
 
+os.makedirs("logs", exist_ok=True)
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     handlers=[
-        logging.FileHandler("logs/rag_pipeline.log"),
+        logging.FileHandler("logs/rag_pipeline.log", mode="a", encoding="utf-8"),
         logging.StreamHandler(),
     ],
 )

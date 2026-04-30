@@ -84,7 +84,7 @@ def _startup() -> None:
         return
     try:
         _get_chain(data_dir=data_dir, rebuild=rebuild)
-    except Exception:
+    except BaseException:
         logger.exception("Startup warmup failed.")
 
 
@@ -99,7 +99,10 @@ def chat(req: ChatRequest) -> ChatResponse:
     if not question:
         raise HTTPException(status_code=400, detail="Question cannot be empty.")
 
-    chain = _get_chain(data_dir=req.data_dir, rebuild=req.rebuild)
+    try:
+        chain = _get_chain(data_dir=req.data_dir, rebuild=req.rebuild)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e)) from e
     result = query_rag(question, chain)
 
     sources = []

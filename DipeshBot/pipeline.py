@@ -8,7 +8,6 @@ from __future__ import annotations
 
 import logging
 import os
-import sys
 
 from loader import load_documents
 from splitter import split_documents, get_chunk_stats
@@ -44,11 +43,12 @@ def initialise_pipeline(data_dir: str = "data", rebuild: bool = False):
     raw_docs = load_documents(data_dir)
 
     if not raw_docs:
-        logger.error(
+        msg = (
             f"No documents found in '{data_dir}'. "
             "Add .txt, .pdf, or .csv files and try again."
         )
-        sys.exit(1)
+        logger.error(msg)
+        raise FileNotFoundError(msg)
 
     logger.info("\n[Step 2/5] Splitting documents...")
     split_docs = split_documents(raw_docs)
