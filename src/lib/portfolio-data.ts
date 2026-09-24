@@ -185,6 +185,7 @@ export const experience = {
 };
 
 export const achievements = [
+  { icon: Trophy, title: "2nd Place — Build_X Hackathon, Suryodaya College of Engineering, Nagpur", year: "2026" },
   { icon: Trophy, title: "IIT Bombay Zerve AI Datathon Finalist", year: "2025" },
   { icon: Trophy, title: "Central India Hackathon Participant", year: "2025" },
   { icon: Trophy, title: "TantraFiesta AI Accessibility Hackathon", year: "2025" },
